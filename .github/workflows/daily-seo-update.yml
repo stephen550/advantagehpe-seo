@@ -1,0 +1,35 @@
+name: Daily SEO Content Update
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 6am ET daily
+  workflow_dispatch:       # Manual trigger anytime
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install anthropic requests
+
+    - name: Run content updater
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: python scripts/update_content.py
+
+    - name: Commit updated pages
+      run: |
+        git config user.name "SEO Bot"
+        git config user.email "seo-bot@advantagehpe.com"
+        git add -A
+        git diff --staged --quiet || git commit -m "Daily SEO update: $(date +'%Y-%m-%d')"
+        git push
