@@ -1,3 +1,55 @@
 # Cloudflare Pages _redirects
 # All traffic redirects to main site after Google indexes content
 /index.html / 200
+
+# ============================================================
+# DUPLICATE URL 301 REDIRECTS - Added April 29, 2026
+# Fixes duplicate service+city URL combinations identified
+# in SEO Janitor audit. Canonical pattern: /{city}-{service}/
+# ============================================================
+
+# --- Fort Walton Beach Duplicates ---
+/emergency-plumber-fort-walton-beach-fl/ /fort-walton-beach-emergency-plumber/ 301
+/emergency-plumber-fort-walton-beach-fl /fort-walton-beach-emergency-plumber/ 301
+
+# --- Destin Duplicates ---
+/water-heater-repair-destin-fl/ /destin-water-heater-repair/ 301
+/water-heater-repair-destin-fl /destin-water-heater-repair/ 301
+/generator-installation-destin-fl/ /destin-generator-installation/ 301
+/generator-installation-destin-fl /destin-generator-installation/ 301
+/electrical-panel-upgrade-destin-fl/ /destin-electrical-panel-upgrade/ 301
+/electrical-panel-upgrade-destin-fl /destin-electrical-panel-upgrade/ 301
+
+# --- Navarre Duplicates ---
+/emergency-plumber-navarre-fl/ /navarre-emergency-plumber/ 301
+/emergency-plumber-navarre-fl /navarre-emergency-plumber/ 301
+/generator-installation-navarre-fl/ /navarre-generator-installation/ 301
+/generator-installation-navarre-fl /navarre-generator-installation/ 301
+/electrical-panel-upgrade-navarre-fl/ /navarre-electrical-panel-upgrade/ 301
+/electrical-panel-upgrade-navarre-fl /navarre-electrical-panel-upgrade/ 301
+
+# --- Niceville Duplicates ---
+/emergency-plumber-niceville-fl/ /niceville-emergency-plumber/ 301
+/emergency-plumber-niceville-fl /niceville-emergency-plumber/ 301
+/generator-installation-niceville-fl/ /niceville-generator-installation/ 301
+/generator-installation-niceville-fl /niceville-generator-installation/ 301
+
+# --- Crestview Duplicates ---
+/emergency-plumber-crestview-fl/ /crestview-emergency-plumber/ 301
+/emergency-plumber-crestview-fl /crestview-emergency-plumber/ 301
+/generator-installation-crestview-fl/ /crestview-generator-installation/ 301
+/generator-installation-crestview-fl /crestview-generator-installation/ 301
+
+# --- Old-Format City URLs (3 remaining) ---
+/hvac-plumbing-electrical-services-in-panama-city-beach-fl/ /panama-city-beach/ 301
+/hvac-plumbing-electrical-services-in-panama-city-beach-fl /panama-city-beach/ 301
+/hvac-plumbing-electrical-services-in-defuniak-springs-fl/ /defuniak-springs/ 301
+/hvac-plumbing-electrical-services-in-defuniak-springs-fl /defuniak-springs/ 301
+/hvac-plumbing-electrical-services-in-crestview-fl/ /crestview/ 301
+/hvac-plumbing-electrical-services-in-crestview-fl /crestview/ 301
+
+# --- 404 Page Redirects (pages that were removed, redirect to canonical equivalents) ---
+/slab-leak-navarre-fl/ /slab-leak-detection-navarre/ 301
+/slab-leak-navarre-fl /slab-leak-detection-navarre/ 301
+/circuit-breaker-fort-walton-beach-fl/ /circuit-breaker-repair-fort-walton-beach/ 301
+/circuit-breaker-fort-walton-beach-fl /circuit-breaker-repair-fort-walton-beach/ 301
